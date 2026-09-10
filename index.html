@@ -1,0 +1,472 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Maryam ❤️</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Romantic Effects -->
+    <div id="petals-container"></div>
+    <div id="hearts-container"></div>
+    <div class="stars"></div>
+    <div class="moon"></div>
+
+
+    <!-- Background Music -->
+    <audio id="birthdayMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn">🎵 Play Music</button>
+
+
+    <!-- ==========================================
+         🎂 BIRTHDAY COUNTDOWN
+    =========================================== -->
+
+    <section class="countdown-section">
+
+        <h2>🎂 Countdown to Your Birthday 🎂</h2>
+
+        <div class="countdown">
+
+            <div class="countdown-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="countdown-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="countdown-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="countdown-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ❤️ BIRTHDAY WEBSITE
+    =========================================== -->
+
+    <section class="birthday-content">
+
+
+        <!-- ==========================================
+             🎉 MAIN BIRTHDAY SECTION
+        =========================================== -->
+
+        <section class="hero">
+
+            <div class="content">
+
+                <p class="small-text">
+                    A Special Day For Someone Special 💕
+                </p>
+
+                <h1>
+                    Happy Birthday
+                </h1>
+
+                <h2>
+                    Maryam ❤️
+                </h2>
+
+                <p class="message">
+                    Today is all about celebrating you,
+                    your beautiful smile, and the happiness
+                    you bring into my life.
+                </p>
+
+                <button onclick="startCelebration()">
+                    Start Your Surprise 🎁
+                </button>
+
+            </div>
+
+
+            <!-- Floating Hearts -->
+
+            <div class="hearts">
+
+                <span>❤️</span>
+                <span>💕</span>
+                <span>💖</span>
+                <span>💗</span>
+                <span>❤️</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             🎂 SURPRISE SECTION
+        =========================================== -->
+
+        <section class="surprise" id="surprise">
+
+            <h2>
+                For You, Maryam 💝
+            </h2>
+
+            <p>
+                May your birthday be filled with love,
+                smiles, beautiful memories, and everything
+                your heart wishes for.
+            </p>
+
+
+            <!-- Birthday Date -->
+
+            <div class="birthday-date">
+                🎂 10 September 🎂
+            </div>
+
+
+
+            <!-- ==========================================
+                 🎂 ANIMATED BIRTHDAY CAKE
+            =========================================== -->
+
+            <div class="cake-container">
+
+                <div class="cake">
+
+                    <div class="candle" onclick="blowCandle()">
+
+                        <div class="flame" id="flame">
+                            🔥
+                        </div>
+
+                    </div>
+
+                    <div class="cake-top"></div>
+
+                    <div class="cake-body">
+
+                        <div class="cream"></div>
+
+                    </div>
+
+                    <div class="cake-bottom"></div>
+
+                </div>
+
+
+                <p class="cake-text">
+                    Make a wish, Maryam! ✨
+                </p>
+
+            </div>
+
+
+            <!-- Birthday Wish -->
+
+            <p class="wish-message" id="wishMessage">
+                Happy Birthday Maryam ❤️
+            </p>
+
+
+            <!-- Love -->
+
+            <p class="love">
+                With lots of love,<br>
+                <strong>Muhsin ❤️</strong>
+            </p>
+
+
+
+            <!-- ==========================================
+                 📸 ROMANTIC PHOTO GALLERY
+                 GALLERY COMES BEFORE LOVE LETTER
+            =========================================== -->
+
+            <section class="photo-gallery">
+
+                <h2>
+                    📸 Your Beautiful Memories ❤️
+                </h2>
+
+                <p>
+                    Every picture holds a special memory. 💕
+                </p>
+
+
+                <div class="gallery-container">
+
+
+                    <!-- Photo 1 -->
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="images/photo1.jpg"
+                            alt="Our Beautiful Memory"
+                        >
+
+                        <div class="photo-heart">
+                            ❤️
+                        </div>
+
+                    </div>
+
+
+                    <!-- Photo 2 -->
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="images/photo2.jpg"
+                            alt="Our Beautiful Memory"
+                        >
+
+                        <div class="photo-heart">
+                            💕
+                        </div>
+
+                    </div>
+
+
+                    <!-- Photo 3 -->
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="images/photo3.jpg"
+                            alt="Our Beautiful Memory"
+                        >
+
+                        <div class="photo-heart">
+                            💖
+                        </div>
+
+                    </div>
+
+
+                    <!-- Photo 4 -->
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="images/photo4.jpg"
+                            alt="Our Beautiful Memory"
+                        >
+
+                        <div class="photo-heart">
+                            💗
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==========================================
+                 💌 LOVE LETTER
+            =========================================== -->
+
+            <div class="love-letter">
+
+                <h2>
+                    💌 My Love Letter to Maryam
+                </h2>
+
+
+                <p>
+                    My dearest Maryam ❤️,
+                </p>
+
+
+                <p>
+                    On your special day, I just want you to know
+                    how incredibly special you are to me.
+                    You bring happiness, warmth, and beautiful
+                    moments into my life.
+                </p>
+
+
+                <p>
+                    Every moment with you is something I treasure.
+                    I hope your birthday is filled with the same
+                    happiness that you bring into my life.
+                </p>
+
+
+                <p>
+                    May all your dreams come true, and may our
+                    beautiful memories continue to grow.
+                    I am grateful for every smile, every conversation,
+                    and every moment we share. ❤️
+                </p>
+
+
+                <p>
+                    Happy Birthday, my special one. 🎂💕
+                </p>
+
+
+                <p class="signature">
+
+                    Forever yours,<br>
+                    Muhsin ❤️
+
+                </p>
+
+
+                <h2>
+                    A Message From Muhsin 💌
+                </h2>
+
+
+                <p>
+                    My dearest Maryam ❤️,
+                </p>
+
+
+                <p>
+                    Your smile makes my days brighter,
+                    and having you in my life makes every moment
+                    more beautiful. 💕
+                </p>
+
+
+                <p>
+                    I hope this birthday brings you endless happiness,
+                    beautiful memories, and all the love you deserve.
+                </p>
+
+
+                <p>
+                    Happy Birthday, Maryam! 🎂❤️
+                </p>
+
+
+                <p class="letter-signature">
+
+                    Forever with love,<br>
+
+                    <strong>
+                        Muhsin ❤️
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <!-- Love Letter Button -->
+
+            <button id="loveLetterBtn">
+                💌 Open My Love Letter
+            </button>
+
+
+        </section>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         🌟 ONE LAST SURPRISE
+    =========================================== -->
+
+    <section class="final-surprise" id="finalSurprise">
+
+        <div class="final-content">
+
+            <div class="final-hearts">
+                ❤️ 💕 ❤️
+            </div>
+
+
+            <h2>
+                One Last Surprise 💖
+            </h2>
+
+
+            <p>
+                Maryam, this website is only a small way of saying
+                how special you are to me. ❤️
+            </p>
+
+
+            <button id="lastSurpriseBtn">
+                💖 One Last Surprise
+            </button>
+
+
+            <div id="finalMessage" class="final-message">
+
+                <h3>
+                    Happy Birthday, My Love! 🎂❤️
+                </h3>
+
+
+                <p>
+                    You are one of the most beautiful parts of my life.
+                    Your smile, your presence, and every moment with you
+                    mean more to me than words can explain. 💕
+                </p>
+
+
+                <p>
+                    I hope this new year of your life brings you
+                    endless happiness, beautiful memories, and
+                    everything your heart wishes for. ✨
+                </p>
+
+
+                <h4>
+                    Forever Yours ❤️
+                </h4>
+
+
+                <strong>
+                    Muhsin 💖
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- END ONE LAST SURPRISE -->
+
+
+    <!-- ==========================================
+         JavaScript File
+    =========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```

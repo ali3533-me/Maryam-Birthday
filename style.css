@@ -1,0 +1,1290 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0015;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Main Hero Section */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background:
+        radial-gradient(circle at top, #5c0038, transparent 45%),
+        linear-gradient(135deg, #17001f, #3b002c, #120016);
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.small-text {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #ffd6e7;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff2f92;
+}
+
+h2 {
+    font-size: clamp(40px, 7vw, 75px);
+    color: #ff4f9a;
+    margin: 10px 0 25px;
+    text-shadow: 0 0 25px #ff1f86;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f9dbe9;
+    margin: 0 auto 35px;
+    max-width: 650px;
+}
+
+/* Button */
+
+button {
+    border: none;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff176f, #ff4fa0);
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(255, 40, 140, 0.7);
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(255, 40, 140, 1);
+}
+
+/* Floating Hearts */
+
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: floatHeart 8s linear infinite;
+    opacity: 0;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Surprise Section */
+
+.surprise {
+    min-height: 100vh;
+    padding: 100px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #26001f, #100013);
+}
+
+.surprise h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 30px;
+}
+
+.surprise p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f8dce9;
+}
+
+.birthday-date {
+    margin: 40px 0;
+    padding: 20px 35px;
+    border: 2px solid #ff4f9a;
+    border-radius: 50px;
+    font-size: 25px;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 50, 150, 0.5);
+}
+
+.love {
+    font-size: 24px !important;
+}
+
+.love strong {
+    color: #ff4f9a;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 20px;
+    }
+
+    .small-text {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+
+    .birthday-date {
+        font-size: 20px;
+        padding: 16px 25px;
+    }
+}
+```
+/* =========================
+   ANIMATED BIRTHDAY CAKE
+========================= */
+
+.cake-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cake {
+    position: relative;
+    width: 220px;
+    height: 180px;
+    margin: 0 auto;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+/* Bottom layer */
+
+.cake-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 180px;
+    height: 65px;
+    background: #c92868;
+    border-radius: 10px 10px 20px 20px;
+    box-shadow: 0 8px 0 #8e1749;
+}
+
+/* Main cake */
+
+.cake-body {
+    position: absolute;
+    bottom: 55px;
+    left: 30px;
+    width: 160px;
+    height: 65px;
+    background: #ff78ad;
+    border-radius: 10px;
+}
+
+/* Cream */
+
+.cream {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 160px;
+    height: 25px;
+    background: #fff0f7;
+    border-radius: 50%;
+}
+
+/* Cake top */
+
+.cake-top {
+    position: absolute;
+    bottom: 105px;
+    left: 40px;
+    width: 140px;
+    height: 25px;
+    background: #ffb6d5;
+    border-radius: 50%;
+}
+
+/* Candle */
+
+.candle {
+    position: absolute;
+    z-index: 5;
+    bottom: 125px;
+    left: 98px;
+    width: 25px;
+    height: 55px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 7px,
+        #ff4f9a 7px,
+        #ff4f9a 14px
+    );
+    border-radius: 5px;
+}
+
+/* Flame */
+
+.flame {
+    position: absolute;
+    top: -38px;
+    left: 1px;
+    font-size: 28px;
+    animation: flameFlicker 0.6s ease-in-out infinite alternate;
+}
+
+/* Cake floating animation */
+
+@keyframes cakeFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Flame animation */
+
+@keyframes flameFlicker {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.25) rotate(4deg);
+    }
+}
+
+/* Cake message */
+
+.cake-text {
+    margin-top: 25px;
+    font-size: 22px !important;
+    color: #ffd1e5 !important;
+    text-shadow: 0 0 15px #ff4f9a;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+
+    from {
+        opacity: 0.7;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile cake */
+
+@media (max-width: 600px) {
+
+    .cake {
+        transform: scale(0.85);
+    }
+
+    .cake-text {
+        font-size: 19px !important;
+    }
+}
+/* INTERACTIVE CANDLE */
+
+.candle {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.candle:hover {
+    transform: scale(1.08);
+}
+
+.flame.off {
+    display: none;
+}
+
+/* Birthday wish message */
+
+.wish-message {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4f9a;
+    text-shadow:
+        0 0 10px #ff4f9a,
+        0 0 20px #ff4f9a,
+        0 0 30px #ff4f9a;
+
+    opacity: 0;
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.wish-message.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 600px) {
+
+    .wish-message {
+        font-size: 23px;
+    }
+}
+/* =========================
+   LOVE LETTER SECTION
+========================= */
+
+.love-letter {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background: #fffaf5;
+    border: 2px solid #e8b4b8;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Small decorative hearts */
+
+.love-letter::before,
+.love-letter::after {
+    content: "❤";
+    position: absolute;
+    font-size: 35px;
+    opacity: 0.2;
+    animation: floatingHeart 3s ease-in-out infinite;
+}
+
+.love-letter::before {
+    top: 15px;
+    left: 20px;
+}
+
+.love-letter::after {
+    bottom: 15px;
+    right: 20px;
+    animation-delay: 1s;
+}
+
+/* Love letter heading */
+
+.love-letter h2 {
+    color: #b83250;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-family: Georgia, serif;
+}
+
+/* Letter text */
+
+.love-letter p {
+    color: #4a3035;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+}
+
+/* Signature */
+
+.love-letter .signature {
+    margin-top: 30px;
+    color: #b83250;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Heart animation */
+
+@keyframes floatingHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Mobile responsive */
+
+@media (max-width: 600px) {
+
+    .love-letter {
+        width: 85%;
+        padding: 30px 20px;
+        margin: 40px auto;
+    }
+
+    .love-letter h2 {
+        font-size: 26px;
+    }
+
+    .love-letter p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .love-letter .signature {
+        font-size: 19px;
+    }
+}
+/* Love letter opening animation */
+
+.love-letter {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 1s ease;
+}
+
+/* This class will be added by JavaScript */
+
+.love-letter.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+/* =========================
+   BIRTHDAY COUNTDOWN
+========================= */
+
+.countdown-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.countdown-section h2 {
+    color: #b83250;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-family: Georgia, serif;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    width: 120px;
+    padding: 20px 10px;
+    background: rgba(255, 250, 245, 0.95);
+    border: 2px solid #e8b4b8;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.countdown-box span {
+    display: block;
+    color: #b83250;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.countdown-box small {
+    display: block;
+    margin-top: 8px;
+    color: #4a3035;
+    font-size: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown-box {
+        width: 75px;
+        padding: 15px 8px;
+    }
+
+    .countdown-box span {
+        font-size: 27px;
+    }
+
+    .countdown-box small {
+        font-size: 13px;
+    }
+
+    .countdown-section h2 {
+        font-size: 24px;
+    }
+}
+/* Music Button */
+#musicBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #b83250;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.05);
+}
+/* 🌙 Romantic Night Sky */
+body {
+    background: linear-gradient(180deg, #050014, #12002b, #21002f);
+    overflow-x: hidden;
+}
+
+/* Stars container */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* 🌙 Moon */
+.moon {
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background: #fff8c6;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #fff8c6,
+                0 0 70px rgba(255, 248, 198, 0.4);
+    z-index: 1;
+pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .moon {
+        width: 55px;
+        height: 55px;
+        top: 40px;
+        right: 20px;
+    }
+}
+body > *:not(.stars):not(.moon) {
+    position: relative;
+    z-index: 2;
+}
+/* ❤️ Floating Hearts */
+#hearts-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatHeart linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(20deg) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(-20deg) scale(0.8);
+        opacity: 0;
+    }
+}
+/* 🌹 FALLING ROSE PETALS */
+
+#petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9998;
+}
+
+.rose-petal {
+    position: absolute;
+    top: -60px;
+    opacity: 0;
+    animation-name: fallRose;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fallRose {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(60px) rotate(180deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(-60px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* =========================
+   📸 ROMANTIC PHOTO GALLERY
+========================= */
+
+.photo-gallery {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.photo-gallery h2,
+.photo-gallery > p {
+    text-align: center;
+}
+
+.photo-gallery h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.photo-gallery > p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 6px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(255, 80, 130, 0.2);
+}
+
+.gallery-card img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 14px;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+.photo-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    font-size: 45px;
+    opacity: 0;
+
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-card:hover .photo-heart {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* 📱 Mobile */
+
+@media (max-width: 600px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .gallery-card img {
+        height: 240px;
+    }
+
+    .photo-gallery h2 {
+        font-size: 26px;
+    }
+}
+/* =========================
+   📸 PHOTO LIGHTBOX FIX
+========================= */
+
+.photo-lightbox {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    z-index: 99999 !important;
+
+    padding: 20px;
+    margin: 0 !important;
+
+    animation: lightboxFade 0.3s ease;
+}
+
+.photo-lightbox img {
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 30px rgba(255, 80, 150, 0.6),
+        0 0 70px rgba(255, 80, 150, 0.3);
+
+    animation: photoZoom 0.4s ease;
+}
+
+/* ❌ Close button */
+
+.photo-lightbox .lightbox-close {
+    position: absolute !important;
+
+    top: 25px !important;
+    right: 25px !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 50% !important;
+
+    background: #b83250 !important;
+    color: white !important;
+
+    font-size: 24px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    cursor: pointer;
+
+    z-index: 100000 !important;
+}
+
+/* Animations */
+
+@keyframes lightboxFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes photoZoom {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .photo-lightbox {
+        padding: 15px;
+    }
+
+    .photo-lightbox img {
+        max-width: 95vw !important;
+        max-height: 75vh !important;
+    }
+
+    .photo-lightbox .lightbox-close {
+        top: 15px !important;
+        right: 15px !important;
+
+        width: 45px !important;
+        height: 45px !important;
+
+        min-width: 45px !important;
+
+        font-size: 20px !important;
+    }
+}
+/* ==========================================
+   💕 ROMANTIC PHOTO OPEN EFFECT
+========================================== */
+
+.photo-lightbox {
+    backdrop-filter: blur(8px);
+}
+
+/* Romantic photo entrance */
+.photo-lightbox img {
+    animation: romanticPhotoOpen 0.8s cubic-bezier(.17,.67,.35,1.3) forwards !important;
+}
+
+@keyframes romanticPhotoOpen {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-8deg);
+        filter: blur(10px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.08) rotate(3deg);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* ✨ Glow around the photo */
+.photo-lightbox img {
+    box-shadow:
+        0 0 20px rgba(255, 80, 150, 0.8),
+        0 0 50px rgba(255, 80, 150, 0.5),
+        0 0 100px rgba(255, 80, 150, 0.25) !important;
+}
+
+/* Close button animation */
+.photo-lightbox .lightbox-close {
+    animation: closeButtonPop 0.6s ease forwards;
+}
+
+@keyframes closeButtonPop {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-180deg);
+    }
+
+    70% {
+        transform: scale(1.15) rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+/* ==========================================
+   🪄 3D PHOTO EFFECT
+========================================== */
+
+.photo-lightbox {
+    perspective: 1000px;
+}
+
+.photo-lightbox img {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+}
+/* ==========================================
+   🪄 3D PHOTO TILT
+========================================== */
+
+.photo-lightbox {
+    perspective: 1200px !important;
+}
+
+.photo-lightbox img {
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    transform:
+        perspective(1200px)
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY))
+        scale(1.02) !important;
+
+    transform-style: preserve-3d !important;
+
+    transition:
+        transform 0.15s ease-out !important;
+
+    will-change: transform;
+}
+/* ==========================================
+🌟 ONE LAST SURPRISE
+========================================== */
+
+.final-surprise {
+min-height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 80px 20px;
+background:
+radial-gradient(circle at center, #5c0038, transparent 50%),
+linear-gradient(135deg, #08000f, #26001f, #08000f);
+position: relative;
+overflow: hidden;
+}
+
+.final-content {
+max-width: 750px;
+position: relative;
+z-index: 5;
+}
+
+.final-hearts {
+font-size: 35px;
+margin-bottom: 25px;
+animation: finalHeartBeat 1.5s infinite;
+}
+
+.final-surprise h2 {
+font-family: Georgia, serif;
+font-size: clamp(40px, 7vw, 70px);
+color: #ff4f9a;
+text-shadow:
+0 0 10px #ff4f9a,
+0 0 30px #ff1f86,
+0 0 60px #ff1f86;
+margin-bottom: 30px;
+}
+
+.final-surprise > .final-content > p {
+font-family: Georgia, serif;
+font-size: clamp(20px, 3vw, 28px);
+line-height: 1.8;
+color: #ffe6f1;
+margin-bottom: 40px;
+}
+
+#lastSurpriseBtn {
+font-size: 20px;
+padding: 18px 38px;
+background: linear-gradient(45deg, #ff176f, #ff4fa0, #ff176f);
+box-shadow:
+0 0 20px rgba(255, 40, 140, .7),
+0 0 50px rgba(255, 40, 140, .3);
+animation: surpriseButtonGlow 2s infinite;
+}
+
+#lastSurpriseBtn:hover {
+transform: scale(1.1);
+}
+
+/* Final message */
+
+.final-message {
+display: none;
+margin-top: 50px;
+padding: 35px 25px;
+border: 2px solid #ff4f9a;
+border-radius: 25px;
+background: rgba(20, 0, 20, .75);
+box-shadow:
+0 0 25px rgba(255, 50, 150, .6),
+0 0 70px rgba(255, 50, 150, .25);
+animation: finalMessageAppear 1.5s ease forwards;
+}
+
+.final-message.show {
+display: block;
+}
+
+.final-message h3 {
+color: #ffd166;
+font-family: Georgia, serif;
+font-size: clamp(28px, 5vw, 45px);
+margin-bottom: 25px;
+text-shadow: 0 0 20px #ffd166;
+}
+
+.final-message p {
+color: #ffe6f1;
+font-family: Georgia, serif;
+font-size: 18px;
+line-height: 1.9;
+margin-bottom: 20px;
+}
+
+.final-message h4 {
+color: #ff4f9a;
+font-family: Georgia, serif;
+font-size: 25px;
+margin-top: 30px;
+margin-bottom: 8px;
+}
+
+.final-message strong {
+color: #ffd166;
+font-size: 24px;
+}
+
+/* Animations */
+
+@keyframes finalHeartBeat {
+0%, 100% {
+transform: scale(1);
+}
+
+```
+50% {
+    transform: scale(1.25);
+}
+```
+
+}
+
+@keyframes surpriseButtonGlow {
+0%, 100% {
+box-shadow:
+0 0 20px rgba(255, 40, 140, .6),
+0 0 40px rgba(255, 40, 140, .2);
+}
+
+```
+50% {
+    box-shadow:
+        0 0 35px rgba(255, 40, 140, 1),
+        0 0 80px rgba(255, 40, 140, .5);
+}
+```
+
+}
+
+@keyframes finalMessageAppear {
+0% {
+opacity: 0;
+transform: scale(.7) translateY(30px);
+}
+
+```
+100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+```
+
+}
+
+@media (max-width: 600px) {
+
+```
+.final-surprise {
+    padding: 60px 18px;
+}
+
+.final-hearts {
+    font-size: 28px;
+}
+
+.final-surprise > .final-content > p {
+    font-size: 19px;
+}
+
+#lastSurpriseBtn {
+    font-size: 17px;
+    padding: 15px 28px;
+}
+
+.final-message {
+    padding: 28px 18px;
+}
+
+.final-message p {
+    font-size: 16px;
+}
+```
+
+}
